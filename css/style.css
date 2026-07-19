@@ -173,12 +173,13 @@ img { max-width: 100%; display: block; }
 }
 .nav-logo::after {
     content: '⚡';
-    position: absolute; top: -6px; right: -18px;
-    font-size: 10px; color: var(--accent-gold); opacity: 0.7;
+    position: absolute; top: -5px; right: -16px;
+    font-size: 9px; color: var(--accent-gold); opacity: 0.6;
+    pointer-events: none;
 }
 .logo-dot { color: var(--accent-scarlet); font-weight: 900; }
 
-.nav-links { display: flex; gap: 36px; }
+.nav-links { display: flex; gap: 28px; }
 .nav-links a {
     font-size: 13px; font-weight: 600; color: var(--text-secondary);
     position: relative; padding: 6px 0; letter-spacing: 0.06em;
@@ -393,7 +394,7 @@ img { max-width: 100%; display: block; }
     display: block; font-size: 12px; color: var(--text-tertiary);
     margin-top: 8px; font-weight: 500;
     font-family: var(--font-heading-en);
-    letter-spacing: 0.08em; text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .about-bio p { color: var(--text-secondary); margin-bottom: 16px; font-size: 16px; line-height: 1.9; font-family: var(--font-body-zh); }
@@ -401,13 +402,13 @@ img { max-width: 100%; display: block; }
 
 .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .tag {
-    display: inline-block; padding: 8px 20px; font-size: 12px; font-weight: 600;
+    display: inline-block; padding: 7px 16px; font-size: 11px; font-weight: 600;
     border-radius: 3px; background: var(--bg-secondary);
     border: 1px solid rgba(200, 150, 62, 0.3); color: var(--text-secondary);
     transition: all var(--transition-fast);
     font-family: var(--font-heading-en);
-    letter-spacing: 0.05em; text-transform: uppercase;
-    position: relative;
+    letter-spacing: 0.04em;
+    position: relative; white-space: nowrap;
 }
 .tag::before {
     content: '✦'; font-size: 8px; margin-right: 6px;
