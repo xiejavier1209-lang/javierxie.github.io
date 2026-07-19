@@ -559,15 +559,12 @@ img { max-width: 100%; display: block; }
     position: relative;
     overflow: hidden;
     background: #000;
-    max-height: 400px;
 }
 
 .video-cover-img {
     width: 100%;
+    height: auto;
     display: block;
-    max-height: 400px;
-    object-fit: contain;
-    background: #000;
     transition: transform var(--transition-base);
 }
 .video-card:hover .video-cover-img { transform: scale(1.02); }

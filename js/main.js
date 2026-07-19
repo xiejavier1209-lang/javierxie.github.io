@@ -179,11 +179,26 @@
         videoIframe.src = '';
 
         if (localVideo) {
-            // Play local video
+            // Try playing local video, fallback to Douyin link on error
             videoPlayer.src = localVideo;
             videoPlayer.style.display = 'block';
             externalLink.style.display = 'none';
-            videoPlayer.play().catch(() => {});
+            const fallbackToDouyin = () => {
+                videoPlayer.style.display = 'none';
+                videoPlayer.src = '';
+                if (douyinUrl) {
+                    externalLink.style.display = 'inline-flex';
+                    externalLink.href = douyinUrl;
+                    const wrapper = document.getElementById('modalVideoWrapper');
+                    wrapper.innerHTML = `
+                        <div style="display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:16px;background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;">
+                            <i class="fa-brands fa-tiktok" style="font-size:56px;opacity:0.8;"></i>
+                            <p style="font-size:16px;opacity:0.7;">${currentLang === 'zh' ? '点击下方按钮在抖音观看' : 'Watch on Douyin'}</p>
+                        </div>`;
+                }
+            };
+            videoPlayer.onerror = fallbackToDouyin;
+            videoPlayer.play().catch(fallbackToDouyin);
         } else if (douyinUrl) {
             // Show external link to Douyin
             videoPlayer.style.display = 'none';
