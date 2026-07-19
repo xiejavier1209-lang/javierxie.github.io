@@ -5,25 +5,25 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-    /* Vintage Parchment Palette */
-    --bg-primary: #F2E0C4;
-    --bg-secondary: #E8D3A8;
-    --bg-card: #FBF4E6;
-    --bg-card-alt: #F7EDDA;
-    --accent-scarlet: #7B2D2D;
-    --accent-gold: #A6793C;
-    --accent-gold-light: #C4A35A;
+    /* Vintage Parchment Palette — Darker Kraft */
+    --bg-primary: #E0CDA8;
+    --bg-secondary: #D4BE94;
+    --bg-card: #EDE0CC;
+    --bg-card-alt: #E8D9C0;
+    --accent-scarlet: #6B2020;
+    --accent-gold: #8B6914;
+    --accent-gold-light: #A68A4A;
     --accent-dark: #2C1810;
     --ink-brown: #3C2415;
     --text-primary: #2C1810;
     --text-secondary: #5C3D2E;
-    --text-tertiary: #8B7355;
-    --border-ornate: #C4A882;
-    --border-light: #D4C4A8;
-    --gold-gradient: linear-gradient(135deg, #8B6914, #A6793C, #C4A35A);
-    --scarlet-gradient: linear-gradient(135deg, #5C1A1A, #7B2D2D, #9B3A3A);
-    --parchment-gradient: linear-gradient(180deg, #F2E0C4 0%, #ECD8B0 30%, #EAD4A8 60%, #F0DCC0 100%);
-    --hero-gradient: linear-gradient(180deg, #EDD8B0 0%, #F2E0C4 30%, #EAD4A8 70%, #F0DCC0 100%);
+    --text-tertiary: #7B6350;
+    --border-ornate: #B8956C;
+    --border-light: #C9B896;
+    --gold-gradient: linear-gradient(135deg, #6B4E0A, #8B6914, #A68A4A);
+    --scarlet-gradient: linear-gradient(135deg, #4A1010, #6B2020, #8B2E2E);
+    --parchment-gradient: linear-gradient(180deg, #E0CDA8 0%, #DBC698 30%, #D8C290 60%, #DECBA4 100%);
+    --hero-gradient: linear-gradient(180deg, #DBC698 0%, #E0CDA8 30%, #D8C290 70%, #DECBA4 100%);
 
     /* Typography — Unified */
     --font-zh: 'Noto Serif SC', 'ZCOOL XiaoWei', 'PingFang SC', 'Microsoft YaHei', serif;
@@ -67,15 +67,15 @@ body {
     background-image:
         /* Horizontal kraft fibers */
         repeating-linear-gradient(0deg,
-            transparent, transparent 4px,
-            rgba(160, 130, 90, 0.12) 4px, rgba(160, 130, 90, 0.12) 4.5px,
-            transparent 4.5px, transparent 8px,
-            rgba(130, 105, 70, 0.08) 8px, rgba(130, 105, 70, 0.08) 8.8px),
+            transparent, transparent 3px,
+            rgba(120, 90, 60, 0.18) 3px, rgba(120, 90, 60, 0.18) 3.5px,
+            transparent 3.5px, transparent 6px,
+            rgba(100, 75, 45, 0.10) 6px, rgba(100, 75, 45, 0.10) 6.8px),
         /* Vertical kraft fibers */
         repeating-linear-gradient(90deg,
-            transparent, transparent 5px,
-            rgba(150, 120, 80, 0.10) 5px, rgba(150, 120, 80, 0.10) 5.5px,
-            transparent 5.5px, transparent 10px),
+            transparent, transparent 4px,
+            rgba(110, 85, 55, 0.14) 4px, rgba(110, 85, 55, 0.14) 4.5px,
+            transparent 4.5px, transparent 8px),
         /* Warm parchment base */
         var(--parchment-gradient);
     color: var(--text-primary);
@@ -91,19 +91,18 @@ body {
 body::before {
     content: '';
     position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    opacity: 0.15;
     background-image:
-        radial-gradient(ellipse at 20% 25%, rgba(139, 105, 20, 0.5) 0%, transparent 40%),
-        radial-gradient(ellipse at 70% 50%, rgba(123, 45, 45, 0.3) 0%, transparent 35%),
-        radial-gradient(ellipse at 45% 80%, rgba(139, 105, 20, 0.4) 0%, transparent 30%),
-        radial-gradient(ellipse at 80% 20%, rgba(166, 121, 60, 0.35) 0%, transparent 25%);
+        radial-gradient(ellipse at 20% 25%, rgba(107, 78, 10, 0.4) 0%, transparent 40%),
+        radial-gradient(ellipse at 70% 50%, rgba(107, 32, 32, 0.25) 0%, transparent 35%),
+        radial-gradient(ellipse at 45% 80%, rgba(107, 78, 10, 0.3) 0%, transparent 30%),
+        radial-gradient(ellipse at 80% 20%, rgba(139, 105, 20, 0.3) 0%, transparent 25%);
     background-size: 100% 100%;
 }
 /* Edge vignette */
 body::after {
     content: '';
     position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    background: radial-gradient(ellipse at center, transparent 60%, rgba(44, 24, 16, 0.12) 100%);
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(44, 24, 16, 0.18) 100%);
 }
 
 ::selection { background: rgba(155, 27, 48, 0.15); color: var(--text-primary); }
@@ -114,10 +113,10 @@ img { max-width: 100%; display: block; }
 .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
 .section { padding: var(--section-padding) 0; position: relative; }
 
-/* Cards also have subtle paper grain */
-.bg-card, .video-card, .gallery-item, .exp-card, .timeline-card, .contact-card, .skill-item, .stat-item, .about-avatar {
+/* Cards also have paper grain */
+.video-card, .gallery-item, .exp-card, .timeline-card, .contact-card, .skill-item, .stat-item {
     background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,115,85,0.02) 2px, rgba(139,115,85,0.02) 2.3px);
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,115,85,0.05) 2px, rgba(139,115,85,0.05) 2.3px);
 }
 
 /* Vintage section-to-section transition */
