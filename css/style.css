@@ -65,26 +65,17 @@ html {
 body {
     background-color: var(--bg-primary);
     background-image:
-        /* Horizontal kraft fibers — thicker, uneven */
+        /* Horizontal kraft fibers */
         repeating-linear-gradient(0deg,
-            transparent, transparent 3px,
-            rgba(139, 115, 85, 0.06) 3px, rgba(139, 115, 85, 0.06) 3.5px,
-            transparent 3.5px, transparent 5px,
-            rgba(120, 100, 70, 0.04) 5px, rgba(120, 100, 70, 0.04) 5.5px),
+            transparent, transparent 4px,
+            rgba(160, 130, 90, 0.12) 4px, rgba(160, 130, 90, 0.12) 4.5px,
+            transparent 4.5px, transparent 8px,
+            rgba(130, 105, 70, 0.08) 8px, rgba(130, 105, 70, 0.08) 8.8px),
         /* Vertical kraft fibers */
         repeating-linear-gradient(90deg,
-            transparent, transparent 4px,
-            rgba(139, 115, 85, 0.05) 4px, rgba(139, 115, 85, 0.05) 4.5px,
-            transparent 4.5px, transparent 7px,
-            rgba(110, 90, 65, 0.03) 7px, rgba(110, 90, 65, 0.03) 7.5px),
-        /* Diagonal fiber — like real kraft paper */
-        repeating-linear-gradient(25deg,
-            transparent, transparent 8px,
-            rgba(150, 125, 100, 0.03) 8px, rgba(150, 125, 100, 0.03) 8.5px),
-        /* Fine speckle for paper grain */
-        repeating-linear-gradient(-15deg,
-            transparent, transparent 2px,
-            rgba(139, 115, 85, 0.02) 2px, rgba(139, 115, 85, 0.02) 2.2px),
+            transparent, transparent 5px,
+            rgba(150, 120, 80, 0.10) 5px, rgba(150, 120, 80, 0.10) 5.5px,
+            transparent 5.5px, transparent 10px),
         /* Warm parchment base */
         var(--parchment-gradient);
     color: var(--text-primary);
@@ -96,44 +87,23 @@ body {
     -webkit-font-feature-settings: "lnum" on;
     font-feature-settings: "lnum" on;
 }
-/* Vintage paper stain / age spots */
+/* Aged paper stain spots */
 body::before {
     content: '';
     position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    opacity: 0.08;
+    opacity: 0.15;
     background-image:
-        radial-gradient(ellipse at 15% 20%, #8B6914 0%, transparent 45%),
-        radial-gradient(ellipse at 75% 60%, #7B2D2D 0%, transparent 40%),
-        radial-gradient(ellipse at 50% 85%, #8B6914 0%, transparent 35%),
-        radial-gradient(ellipse at 85% 15%, #A6793C 0%, transparent 30%),
-        radial-gradient(ellipse at 30% 50%, #B8860B 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 25%, rgba(139, 105, 20, 0.5) 0%, transparent 40%),
+        radial-gradient(ellipse at 70% 50%, rgba(123, 45, 45, 0.3) 0%, transparent 35%),
+        radial-gradient(ellipse at 45% 80%, rgba(139, 105, 20, 0.4) 0%, transparent 30%),
+        radial-gradient(ellipse at 80% 20%, rgba(166, 121, 60, 0.35) 0%, transparent 25%);
     background-size: 100% 100%;
 }
-/* Kraft paper edge vignette + speckle */
+/* Edge vignette */
 body::after {
     content: '';
     position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    opacity: 0.04;
-    background-image:
-        /* Edge darkening vignette */
-        radial-gradient(ellipse at center, transparent 55%, rgba(60, 36, 21, 0.15) 100%),
-        /* Random speckle / fiber flecks */
-        radial-gradient(circle at 10% 10%, var(--accent-gold) 1px, transparent 1px),
-        radial-gradient(circle at 30% 25%, var(--ink-brown) 0.6px, transparent 0.6px),
-        radial-gradient(circle at 55% 15%, var(--accent-gold-light) 0.8px, transparent 0.8px),
-        radial-gradient(circle at 70% 45%, var(--accent-gold) 0.7px, transparent 0.7px),
-        radial-gradient(circle at 20% 65%, var(--ink-brown) 0.5px, transparent 0.5px),
-        radial-gradient(circle at 45% 75%, var(--accent-gold-light) 0.9px, transparent 0.9px),
-        radial-gradient(circle at 80% 70%, var(--accent-gold) 0.6px, transparent 0.6px),
-        radial-gradient(circle at 90% 90%, var(--ink-brown) 0.7px, transparent 0.7px),
-        radial-gradient(circle at 5% 50%, var(--accent-gold-light) 0.8px, transparent 0.8px),
-        radial-gradient(circle at 60% 5%, var(--accent-gold) 0.5px, transparent 0.5px);
-    background-size: 100% 100%, 200px 200px, 180px 180px, 160px 160px, 190px 190px, 170px 170px, 200px 200px, 185px 185px, 175px 175px, 195px 195px, 165px 165px;
-    animation: bgShimmer 90s linear infinite;
-}
-@keyframes bgShimmer {
-    0% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
-    100% { background-position: 0 0, 200px 200px, -180px 180px, 160px -160px, -190px -190px, 170px 170px, -200px 200px, 185px -185px, -175px -175px, 195px 195px, -165px 165px; }
+    background: radial-gradient(ellipse at center, transparent 60%, rgba(44, 24, 16, 0.12) 100%);
 }
 
 ::selection { background: rgba(155, 27, 48, 0.15); color: var(--text-primary); }
