@@ -279,9 +279,12 @@
         const container = document.getElementById(containerId);
         if (!container) return;
 
-        images.forEach(img => {
+        const VISIBLE_COUNT = 4; // Show 4 items, collapse the rest
+
+        images.forEach((img, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
+            if (index >= VISIBLE_COUNT) item.classList.add('collapsed');
             item.setAttribute('data-aos', 'fade-up');
             const caption = currentLang === 'zh' ? img.zh : img.en;
             item.innerHTML = `
@@ -293,6 +296,37 @@
             });
             container.appendChild(item);
         });
+
+        // Add collapse toggle if there are more items than VISIBLE_COUNT
+        if (images.length > VISIBLE_COUNT) {
+            const wrap = document.createElement('div');
+            wrap.className = 'gallery-toggle-wrap';
+            const btn = document.createElement('button');
+            btn.className = 'gallery-toggle';
+            btn.innerHTML = '<span data-zh="展开更多" data-en="Show More">展开更多</span> <span class="toggle-icon">▾</span>';
+            btn.addEventListener('click', function() {
+                const grid = this.parentElement.parentElement;
+                const items = grid.querySelectorAll('.gallery-item.collapsed');
+                const isExpanding = items.length > 0 && items[0].style.display !== 'block';
+
+                if (this.classList.contains('expanded')) {
+                    // Collapse
+                    items.forEach(item => { item.style.display = 'none'; });
+                    this.classList.remove('expanded');
+                    const span = this.querySelector('[data-zh]');
+                    if (span) span.textContent = currentLang === 'zh' ? '展开更多' : 'Show More';
+                } else {
+                    // Expand
+                    items.forEach(item => { item.style.display = 'block'; });
+                    this.classList.add('expanded');
+                    const span = this.querySelector('[data-zh]');
+                    if (span) span.textContent = currentLang === 'zh' ? '收起' : 'Collapse';
+                }
+                if (typeof AOS !== 'undefined') AOS.refresh();
+            });
+            wrap.appendChild(btn);
+            container.parentElement.appendChild(wrap);
+        }
 
         // Refresh AOS for new elements
         if (typeof AOS !== 'undefined') AOS.refresh();
