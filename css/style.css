@@ -882,7 +882,6 @@ img { max-width: 100%; display: block; }
 .footer-copy {
     color: var(--text-tertiary); font-size: 12px; opacity: 0.5;
 }
-}
 
 /* ============================================================
    RESPONSIVE
