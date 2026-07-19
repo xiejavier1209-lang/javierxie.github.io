@@ -264,25 +264,6 @@ img { max-width: 100%; display: block; }
     50% { opacity: 0.9; transform: scale(1.2); }
 }
 
-/* Floating magical particles */
-.hero-bg-particles {
-    position: absolute; inset: 0; pointer-events: none; overflow: hidden;
-}
-.hero-particle {
-    position: absolute;
-    width: 4px; height: 4px;
-    background: var(--accent-gold);
-    border-radius: 50%;
-    animation: floatUp 8s linear infinite;
-    opacity: 0;
-}
-@keyframes floatUp {
-    0% { opacity: 0; transform: translateY(100vh) scale(0); }
-    10% { opacity: 0.6; }
-    90% { opacity: 0.1; }
-    100% { opacity: 0; transform: translateY(-10vh) scale(1); }
-}
-
 .hero-greeting {
     font-family: var(--font-heading-en);
     font-size: clamp(14px, 2vw, 18px); color: var(--text-secondary);
@@ -391,10 +372,9 @@ img { max-width: 100%; display: block; }
 }
 .stat-unit { font-size: 0.45em; font-weight: 700; }
 .stat-label {
-    display: block; font-size: 12px; color: var(--text-tertiary);
+    display: block; font-size: 13px; color: var(--text-tertiary);
     margin-top: 8px; font-weight: 500;
-    font-family: var(--font-heading-en);
-    letter-spacing: 0.04em;
+    font-family: var(--font-body-zh);
 }
 
 .about-bio p { color: var(--text-secondary); margin-bottom: 16px; font-size: 16px; line-height: 1.9; font-family: var(--font-body-zh); }
@@ -402,25 +382,17 @@ img { max-width: 100%; display: block; }
 
 .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 .tag {
-    display: inline-block; padding: 7px 16px; font-size: 11px; font-weight: 600;
-    border-radius: 3px; background: var(--bg-secondary);
-    border: 1px solid rgba(200, 150, 62, 0.3); color: var(--text-secondary);
+    display: inline-block; padding: 8px 18px; font-size: 13px; font-weight: 600;
+    border-radius: 24px; background: var(--bg-secondary);
+    border: 1.5px solid rgba(200, 150, 62, 0.2); color: var(--text-secondary);
     transition: all var(--transition-fast);
-    font-family: var(--font-heading-en);
-    letter-spacing: 0.04em;
-    position: relative; white-space: nowrap;
-}
-.tag::before {
-    content: '✦'; font-size: 8px; margin-right: 6px;
-    color: var(--accent-gold); opacity: 0;
-    transition: opacity var(--transition-fast);
+    font-family: var(--font-body-zh);
 }
 .tag:hover {
     background: var(--accent-scarlet); color: #fff;
     border-color: var(--accent-scarlet);
-    transform: translateY(-2px); box-shadow: 0 6px 20px rgba(155, 27, 48, 0.25);
+    transform: translateY(-2px); box-shadow: 0 4px 12px rgba(155, 27, 48, 0.2);
 }
-.tag:hover::before { opacity: 1; }
 
 /* ============================================================
    EDUCATION
@@ -607,8 +579,7 @@ img { max-width: 100%; display: block; }
 }
 
 .video-thumb-bg {
-    width: 100%;
-    aspect-ratio: 3 / 4;
+    width: 100%; height: 100%;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     gap: 12px; color: rgba(255,255,255,0.85);
@@ -621,7 +592,7 @@ img { max-width: 100%; display: block; }
     display: block;
     transition: transform var(--transition-base);
 }
-.video-card:hover .video-cover-img { transform: scale(1.03); }
+.video-card:hover .video-cover-img { transform: scale(1.02); }
 
 .video-play-btn {
     position: absolute; inset: 0;
@@ -710,7 +681,7 @@ img { max-width: 100%; display: block; }
     background: rgba(200, 150, 62, 0.08);
 }
 .gallery-item img {
-    width: 100%; aspect-ratio: 16/9; object-fit: cover;
+    width: 100%; height: auto; display: block;
     transition: transform 0.6s var(--ease-out-expo);
 }
 .gallery-item:hover img { transform: scale(1.04); }
