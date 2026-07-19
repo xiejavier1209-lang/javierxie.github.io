@@ -181,10 +181,8 @@ img { max-width: 100%; display: block; }
 
 .nav-links { display: flex; gap: 28px; }
 .nav-links a {
-    font-size: 13px; font-weight: 600; color: var(--text-secondary);
-    position: relative; padding: 6px 0; letter-spacing: 0.06em;
-    font-family: var(--font-heading-en);
-    text-transform: uppercase;
+    font-size: 14px; font-weight: 600; color: var(--text-secondary);
+    position: relative; padding: 6px 0; letter-spacing: 0.02em;
 }
 .nav-links a::after {
     content: ''; position: absolute; bottom: 0; left: 0;
@@ -265,10 +263,8 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-greeting {
-    font-family: var(--font-heading-en);
-    font-size: clamp(14px, 2vw, 18px); color: var(--text-secondary);
-    margin-bottom: 16px; font-weight: 500; letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: clamp(16px, 2vw, 20px); color: var(--text-secondary);
+    margin-bottom: 16px; font-weight: 500; letter-spacing: 0.06em;
 }
 .hero-name {
     font-family: var(--font-heading);
@@ -480,7 +476,7 @@ img { max-width: 100%; display: block; }
 .mcn-icon { background: linear-gradient(135deg, #E8C547, #D4AF37); color: #4A0E17; }
 .exp-company { font-family: var(--font-display); font-size: 20px; font-weight: 800; margin-bottom: 2px; letter-spacing: 0.06em; }
 .exp-role { font-size: 15px; color: var(--text-secondary); font-weight: 500; margin-bottom: 2px; font-family: var(--font-body-zh); }
-.exp-date { font-size: 13px; color: var(--text-tertiary); font-family: var(--font-heading-en); letter-spacing: 0.04em; }
+.exp-date { font-size: 13px; color: var(--text-tertiary); }
 .exp-card-right { display: flex; align-items: center; gap: 20px; }
 .exp-highlights-pills { display: flex; gap: 10px; flex-wrap: wrap; }
 .exp-pill {
@@ -625,16 +621,12 @@ img { max-width: 100%; display: block; }
 .video-info .video-meta {
     font-size: 12px; color: var(--text-tertiary);
     display: flex; align-items: center; gap: 8px;
-    font-family: var(--font-heading-en);
-    letter-spacing: 0.04em;
 }
 .video-source {
     display: inline-block; padding: 3px 10px;
-    font-size: 10px; font-weight: 700;
-    border-radius: 3px; background: rgba(155, 27, 48, 0.08);
+    font-size: 11px; font-weight: 600;
+    border-radius: 12px; background: rgba(155, 27, 48, 0.08);
     color: var(--accent-scarlet);
-    font-family: var(--font-heading-en);
-    letter-spacing: 0.06em; text-transform: uppercase;
 }
 
 /* Image Gallery for Co-marketing */
@@ -889,7 +881,7 @@ img { max-width: 100%; display: block; }
 .footer-text { color: var(--text-tertiary); font-size: 14px; margin-bottom: 10px; font-weight: 500; font-family: var(--font-body); }
 .footer-copy {
     color: var(--text-tertiary); font-size: 12px; opacity: 0.5;
-    font-family: var(--font-heading-en); letter-spacing: 0.06em;
+}
 }
 
 /* ============================================================
