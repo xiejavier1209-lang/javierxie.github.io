@@ -150,17 +150,8 @@
     function initVideoCards() {
         document.querySelectorAll('.video-card').forEach(card => {
             card.addEventListener('click', () => {
-                const localVideo = card.getAttribute('data-video');
                 const douyinUrl = card.getAttribute('data-douyin');
-
-                // If no local video, open Douyin directly
-                if (!localVideo && douyinUrl) {
-                    window.open(douyinUrl, '_blank');
-                    return;
-                }
-
-                // Has local video — try modal playback
-                openVideoModal(card);
+                if (douyinUrl) window.open(douyinUrl, '_blank');
             });
         });
     }
