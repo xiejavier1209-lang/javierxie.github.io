@@ -3,668 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="谢哈维尔 Javier Xie - 品牌传播 · AIGC创新 · 用户增长 | 个人作品集网站">
-    <title>Javier Xie | 品牌传播 · 创意作品集</title>
+    <meta name="description" content="Javier Xie Creative Archive — Brand Communication · Content Creation · Growth Strategy">
+    <title>Javier Xie · Creative Archive</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <!-- AOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Noto+Serif+SC:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
-    <!-- Kraft paper texture overlay (SVG noise) -->
-    <svg style="position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:0.35;" xmlns="http://www.w3.org/2000/svg">
-        <filter id="kraft-noise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" stitchTiles="stitch"/>
-            <feColorMatrix type="saturate" values="0"/>
-            <feComponentTransfer>
-                <feFuncR type="linear" slope="1.5" intercept="-0.3"/>
-                <feFuncG type="linear" slope="1.2" intercept="-0.2"/>
-                <feFuncB type="linear" slope="0.8" intercept="-0.1"/>
-            </feComponentTransfer>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#kraft-noise)"/>
-    </svg>
+    <!-- ==================== SCENE 1: ARCHIVE ENTRANCE ==================== -->
+    <section id="archive-entrance" class="wood-bg">
+        <canvas id="dust-canvas"></canvas>
+        <div class="candle-glow"></div>
+        <div class="candle-glow right"></div>
 
-    <!-- ==================== NAVBAR ==================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">JAVIER<span class="logo-dot">.</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" data-zh="关于" data-en="About">关于</a></li>
-                <li><a href="#education" data-zh="教育" data-en="Education">教育</a></li>
-                <li><a href="#experience" data-zh="经历" data-en="Experience">经历</a></li>
-                <li><a href="#portfolio" data-zh="作品" data-en="Portfolio">作品</a></li>
-                <li><a href="#skills" data-zh="技能" data-en="Skills">技能</a></li>
-                <li><a href="#contact" data-zh="联系" data-en="Contact">联系</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="lang-toggle" id="langToggle" aria-label="Switch Language">
-                    <span class="lang-zh active">中</span>
-                    <span class="lang-divider">/</span>
-                    <span class="lang-en">EN</span>
-                </button>
-                <button class="hamburger" id="hamburger" aria-label="Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+        <div class="archive-box" id="archiveBox">
+            <span class="brass-corner tl"></span>
+            <span class="brass-corner tr"></span>
+            <span class="brass-corner bl"></span>
+            <span class="brass-corner br"></span>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-        </div>
-        <div class="hero-content">
-            <p class="hero-greeting" data-aos="fade-up" data-aos-duration="800">
-                <span data-zh="你好，我是" data-en="Hello, I'm"></span>
-            </p>
-            <h1 class="hero-name" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
-                谢哈维尔<span class="hero-name-accent">Javier Xie</span>
-            </h1>
-            <div class="hero-tags" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                <span class="hero-tag" data-zh="品牌传播" data-en="Brand Strategy">品牌传播</span>
-                <span class="hero-tag-sep">·</span>
-                <span class="hero-tag" data-zh="AIGC创新" data-en="AIGC Innovation">AIGC创新</span>
-                <span class="hero-tag-sep">·</span>
-                <span class="hero-tag" data-zh="用户增长" data-en="Growth Marketing">用户增长</span>
+            <div class="brass-lock"></div>
+
+            <div class="box-title">JAVIER XIE</div>
+            <div class="box-subtitle">Creative Archive</div>
+            <div class="box-divider"></div>
+            <div class="box-roles">
+                Brand Communication<br>
+                Content Creation<br>
+                Growth Strategy
             </div>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400"
-               data-zh="复旦大学广告学硕士 | 头部科技公司品牌实战 | 千万级曝光项目操盘"
-               data-en="M.A. Advertising @Fudan | Brand Strategy @Top Tech | 40M+ Exposure Projects">
-               复旦大学广告学硕士 | 头部科技公司品牌实战 | 千万级曝光项目操盘
-            </p>
-            <div class="hero-cta" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
-                <a href="#portfolio" class="btn btn-primary" data-zh="查看作品集" data-en="View Portfolio">查看作品集</a>
-                <a href="#contact" class="btn btn-outline" data-zh="联系我" data-en="Contact Me">联系我</a>
-            </div>
-        </div>
-        <div class="scroll-indicator" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
-            <span data-zh="向下滚动" data-en="Scroll Down">向下滚动</span>
-            <div class="scroll-arrow"></div>
+
+            <div class="box-signature left">Javier Xie</div>
+            <div class="box-signature">谢哈维尔</div>
+
+            <div class="wax-seal"><span class="wax-seal-inner">J</span></div>
+
+            <div class="open-prompt" data-zh="打开档案" data-en="Open the Archive">Open the Archive</div>
         </div>
     </section>
 
-    <!-- ==================== ABOUT ==================== -->
-    <section class="about section" id="about">
+    <!-- ==================== SCENE 2: IDENTITY RECORD ==================== -->
+    <section id="identity-record" class="content-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="section-title-num">01</span>
-                <span data-zh="关于我" data-en="About Me">关于我</span>
-                <span class="section-title-line"></span>
-            </h2>
-            <div class="about-grid">
-                <div class="about-visual" data-aos="fade-right" data-aos-duration="800">
-                    <div class="about-avatar-wrapper">
-                        <div class="about-avatar">
-                            <img src="images/证件照.JPG" alt="Javier Xie" class="about-avatar-img">
-                        </div>
-                        <div class="about-avatar-ring"></div>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                            <span class="stat-num">4000<span class="stat-unit">w+</span></span>
-                            <span class="stat-label" data-zh="全网曝光量" data-en="Total Exposure">全网曝光量</span>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="350">
-                            <span class="stat-num">400<span class="stat-unit">w+</span></span>
-                            <span class="stat-label" data-zh="项目预算管理" data-en="Budget Managed">项目预算管理</span>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
-                            <span class="stat-num">190<span class="stat-unit">+</span></span>
-                            <span class="stat-label" data-zh="单项目ROI" data-en="Single Project ROI">单项目ROI</span>
-                        </div>
-                    </div>
+            <div class="page-frame parchment">
+                <div class="section-label" data-zh="身份档案" data-en="Identity Record">Identity Record</div>
+                <div class="section-heading" data-zh="创作者档案" data-en="The Creative Craftsman">创作者档案</div>
+
+                <div class="lang-bookmarks">
+                    <button class="lang-bookmark active" data-lang="zh">中文</button>
+                    <button class="lang-bookmark" data-lang="en">English</button>
                 </div>
-                <div class="about-text" data-aos="fade-left" data-aos-duration="800">
-                    <div class="about-bio">
-                        <p data-zh="具备头部科技公司（Momenta、NIO）品牌传播、项目管理与用户增长实战经验，主导多项千万级曝光项目，工作涵盖品牌传播、AIGC创新应用、UGC生态建设、SEO优化、GEO优化、舆情管理及全流程预算管控。"
-                           data-en="Brand strategy and growth marketing professional with hands-on experience at leading tech companies (Momenta, NIO). Led multiple projects achieving 10M+ exposure, covering brand strategy, AIGC innovation, UGC ecosystem building, SEO/GEO optimization, reputation management, and full-cycle budget control.">
-                        具备头部科技公司（Momenta、NIO）品牌传播、项目管理与用户增长实战经验，主导多项千万级曝光项目，工作涵盖品牌传播、AIGC创新应用、UGC生态建设、SEO优化、GEO优化、舆情管理及全流程预算管控。
-                        </p>
-                        <p data-zh="擅长跳出旧有路径，从0到1构建高ROI内容体系。精通多风格内容生产与AIGC技术应用，完成多次路径验证；优异的用户增长与账号孵化能力，曾实现达人账号粉丝数20倍增长，3个月蔚来门店获客线索增长5倍达4500+。"
-                           data-en="Skilled at building high-ROI content systems from scratch. Proficient in multi-style content production and AIGC technology. Proven growth track record: 20x follower growth for creator accounts, 5x increase in NIO store leads to 4,500+ in 3 months.">
-                        擅长跳出旧有路径，从0到1构建高ROI内容体系。精通多风格内容生产与AIGC技术应用，完成多次路径验证；优异的用户增长与账号孵化能力，曾实现达人账号粉丝数20倍增长，3个月蔚来门店获客线索增长5倍达4500+。
-                        </p>
+
+                <div class="identity-layout">
+                    <div class="portrait-frame">
+                        <img src="images/证件照.JPG" alt="Javier Xie" loading="lazy">
                     </div>
-                    <div class="about-tags" data-aos="fade-up" data-aos-delay="200">
-                        <span class="tag">品牌策略</span><span class="tag">AIGC</span><span class="tag">UGC生态</span>
-                        <span class="tag">SEO/GEO</span><span class="tag">舆情管理</span><span class="tag">数据分析</span>
+                    <div class="identity-details">
+                        <div class="identity-name">Javier Xie</div>
+                        <div class="identity-titles" data-zh="创意工匠 · 视觉叙述者 · 营销炼金师" data-en="Creative Craftsman · Visual Storyteller · Marketing Alchemist">
+                            创意工匠 · 视觉叙述者 · 营销炼金师
+                        </div>
+                        <div class="identity-bio" data-zh="具备头部科技公司品牌传播与用户增长实战经验。擅长跳出旧有路径，从0到1构建高ROI内容体系。精通多风格内容生产与AIGC技术应用。主导多项千万级曝光项目，工作涵盖品牌传播、AIGC创新应用、UGC生态建设、SEO/GEO优化及全流程预算管控。"
+                             data-en="Brand strategy and growth marketing professional with hands-on experience at leading tech companies. Skilled at building high-ROI content systems from scratch. Led multiple projects achieving 10M+ exposure. Expertise spans brand strategy, AIGC innovation, UGC ecosystem development, and full-cycle budget control.">
+                            具备头部科技公司品牌传播与用户增长实战经验。擅长跳出旧有路径，从0到1构建高ROI内容体系。精通多风格内容生产与AIGC技术应用。主导多项千万级曝光项目。
+                        </div>
+                        <div class="identity-signature">Javier Xie</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== EDUCATION ==================== -->
-    <section class="education section" id="education">
+    <!-- ==================== SCENE 3: CAREER CHRONICLE ==================== -->
+    <section id="career-chronicle" class="content-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="section-title-num">02</span>
-                <span data-zh="教育经历" data-en="Education">教育经历</span>
-                <span class="section-title-line"></span>
-            </h2>
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                <div class="timeline-item" data-aos="fade-right" data-aos-duration="800">
-                    <div class="timeline-dot">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div class="timeline-card">
-                        <div class="timeline-card-header">
-                            <span class="timeline-badge" data-zh="硕士" data-en="Master">硕士</span>
-                            <span class="timeline-date">2023.09 - 2026.06</span>
-                        </div>
-                        <h3 class="timeline-school">
-                            <span data-zh="复旦大学" data-en="Fudan University">复旦大学</span>
-                            <span class="timeline-tag-985">985</span>
-                        </h3>
-                        <p class="timeline-major" data-zh="广告学 · 新闻与传播学院" data-en="Advertising · School of Journalism">广告学 · 新闻与传播学院</p>
-                    </div>
+            <div class="page-frame parchment">
+                <div class="section-label" data-zh="职业记录" data-en="Career Chronicle">Career Chronicle</div>
+                <div class="section-heading" data-zh="职业记录卷轴" data-en="The Professional Scroll">职业记录卷轴</div>
+
+                <!-- Education -->
+                <div class="chronicle-entry">
+                    <div class="chronicle-org" data-zh="复旦大学" data-en="Fudan University">复旦大学</div>
+                    <div class="chronicle-role" data-zh="广告学硕士 · 新闻与传播学院" data-en="M.A. Advertising · School of Journalism">广告学硕士 · 新闻与传播学院</div>
+                    <div class="chronicle-date">2023.09 — 2026.06</div>
                 </div>
-                <div class="timeline-item" data-aos="fade-left" data-aos-duration="800">
-                    <div class="timeline-dot">
-                        <i class="fa-solid fa-graduation-cap"></i>
+
+                <div class="chronicle-entry">
+                    <div class="chronicle-org" data-zh="中国人民大学" data-en="Renmin University of China">中国人民大学</div>
+                    <div class="chronicle-role" data-zh="日语本科 · 外国语学院" data-en="B.A. Japanese · School of Foreign Languages">日语本科 · 外国语学院</div>
+                    <div class="chronicle-date">2019.09 — 2023.06 · 神户大学交换 (2022)</div>
+                </div>
+
+                <!-- Momenta -->
+                <div class="chronicle-entry">
+                    <div class="chronicle-org">Momenta</div>
+                    <div class="chronicle-role" data-zh="品牌市场公关实习生" data-en="Brand Marketing & PR Intern">品牌市场公关实习生</div>
+                    <div class="chronicle-date">2025.04 — 2026.01 · Shanghai</div>
+                    <div class="chronicle-details">
+                        <p data-zh="年度S+级上海车展发布会，全网曝光600w+；广丰科技开放日、Uber战略发布等Co-mkt项目，曝光1450w+；产品GTM传播策略，曝光1700w+。SEO与GEO优化，舆情管理与媒体策略。AIGC工作流搭建，AIGC Co-marketing项目落地。跨部门品牌项目预算与流程管理，400w+预算执行。" data-en="S+-tier Auto Shanghai launch (6M+ exposure); GAC-Toyota Tech Open Day, Uber strategic announcement Co-marketing (14.5M+ exposure); Product GTM strategy (17M+ exposure). SEO/GEO optimization. AIGC workflow development. Cross-departmental brand budget management (4M+).">年度S+级上海车展发布会，全网曝光600w+。广丰科技开放日、Uber战略发布等Co-mkt项目，曝光1450w+。产品GTM传播策略，曝光1700w+。SEO与GEO优化。AIGC工作流搭建与项目落地。跨部门品牌项目预算管理400w+。</p>
                     </div>
-                    <div class="timeline-card">
-                        <div class="timeline-card-header">
-                            <span class="timeline-badge" data-zh="本科" data-en="Bachelor">本科</span>
-                            <span class="timeline-date">2019.09 - 2023.06</span>
+                    <span class="chronicle-toggle" data-zh="展开记录" data-en="Unfold Record">Unfold Record</span>
+                </div>
+
+                <!-- NIO -->
+                <div class="chronicle-entry">
+                    <div class="chronicle-org">NIO 蔚来</div>
+                    <div class="chronicle-role" data-zh="用户增长运营实习生" data-en="User Growth Operations Intern">用户增长运营实习生</div>
+                    <div class="chronicle-date">2025.01 — 2026.04 · Shanghai</div>
+                    <div class="chronicle-details">
+                        <p data-zh="上海区域门店抖音本地生活运营，3个月获取销售线索4500+（增长5倍），到店转化15%+。产出200+条KOC/KOS品牌内容。三八妇女节品牌特别企划（3期深度访谈+1期TVC），全网播放90w+。独立完成NIO上海内容后台标签体系搭建。" data-en="Led Douyin local-life operations for Shanghai stores: 4,500+ sales leads in 3 months (5x growth), 15%+ in-store conversion. Produced 200+ KOC/KOS brand content pieces. International Women's Day brand campaign (3 interviews + 1 TVC), 900K+ views. Built NIO Shanghai content tagging system.">上海区域门店抖音本地生活运营，3个月获取销售线索4500+（增长5倍），到店转化15%+。产出200+条KOC/KOS品牌内容。三八妇女节品牌特别企划（3期深度访谈+1期TVC），全网播放90w+。独立完成NIO上海内容后台标签体系搭建。</p>
+                    </div>
+                    <span class="chronicle-toggle" data-zh="展开记录" data-en="Unfold Record">Unfold Record</span>
+                </div>
+
+                <!-- 雅杰工作室 -->
+                <div class="chronicle-entry">
+                    <div class="chronicle-org" data-zh="雅杰工作室" data-en="Yajie Studio">雅杰工作室</div>
+                    <div class="chronicle-role" data-zh="爆款账号孵化" data-en="Viral Account Incubation">爆款账号孵化</div>
+                    <div class="chronicle-date">2024.06 — 2026.01</div>
+                    <div class="chronicle-details">
+                        <p data-zh="孵化了雅杰不加班个人IP，创作3D打印创意视频。全网粉丝从0增长至5w+，抖音累计获赞110w+，小红书单条笔记最高阅读180w+。品牌合作覆盖东芝冰箱、麦当劳、石头扫地机器人、诚实一口猫粮等知名品牌。多个视频实现全平台播放量190w+至630w+。" data-en="Incubated 'Yajie Never Works Overtime' personal IP, creating 3D-printed creative videos. Grew followers from 0 to 50K+, 1.1M+ total likes on Douyin, 1.8M+ peak single-note views on RED. Brand collaborations include Toshiba, McDonald's, Roborock, Honest Bite. Multiple videos achieved 1.9M-6.3M+ cross-platform views.">孵化了雅杰不加班个人IP，创作3D打印创意视频。全网粉丝0→5w+，抖音累计获赞110w+，小红书单条笔记最高阅读180w+。品牌合作覆盖东芝冰箱、麦当劳、石头扫地机器人、诚实一口猫粮等。多个视频全平台播放量190w+至630w+。</p>
+                    </div>
+                    <span class="chronicle-toggle" data-zh="展开记录" data-en="Unfold Record">Unfold Record</span>
+                </div>
+
+                <!-- 海丞MCN -->
+                <div class="chronicle-entry">
+                    <div class="chronicle-org" data-zh="海丞MCN" data-en="Haicheng MCN">海丞MCN</div>
+                    <div class="chronicle-role" data-zh="传播策划" data-en="Content Strategist">传播策划</div>
+                    <div class="chronicle-date">2021.07 — 2021.11</div>
+                    <div class="chronicle-details">
+                        <p data-zh="主导小红书、抖音平台传播策划与投放策略，输出KOL内容制作和达人筛选建议。完成年度中国留学趋势白皮书数据可视化项目。3个月内完成4份行业调研报告。" data-en="Led content strategy and ad placement on RED and Douyin platforms. Produced KOL content creation and talent selection recommendations. Completed annual China Study Abroad Trends white paper data visualization. Delivered 4 industry research reports in 3 months.">主导小红书、抖音平台传播策划与投放策略。完成年度中国留学趋势白皮书数据可视化项目。3个月内完成4份行业调研报告。</p>
+                    </div>
+                    <span class="chronicle-toggle" data-zh="展开记录" data-en="Unfold Record">Unfold Record</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCENE 4: CREATIVE EXPERIMENTS ==================== -->
+    <section id="creative-experiments" class="content-section">
+        <div class="container">
+            <div class="page-frame parchment">
+                <div class="section-label" data-zh="创意实验" data-en="Creative Experiments">Creative Experiments</div>
+                <div class="section-heading" data-zh="炼金实验档案" data-en="The Alchemy Archives">炼金实验档案</div>
+
+                <!-- Experiment 001 -->
+                <div class="experiment">
+                    <div class="exp-num">Experiment 001</div>
+                    <div class="exp-title">Flying House Wireless Charger</div>
+                    <div class="exp-zh">飞屋磁吸无线充</div>
+                    <div class="exp-meta">
+                        <div class="exp-stat"><div class="exp-stat-num">390w+</div><div class="exp-stat-label">Total Views</div></div>
+                        <div class="exp-stat"><div class="exp-stat-num">13w+</div><div class="exp-stat-label">Likes</div></div>
+                    </div>
+                    <a class="exp-link" href="https://v.douyin.com/kUNWu0pgtoo/" target="_blank" data-zh="观看实验记录" data-en="View Experiment">View Experiment</a>
+                </div>
+
+                <!-- Experiment 002 -->
+                <div class="experiment">
+                    <div class="exp-num">Experiment 002</div>
+                    <div class="exp-title">Two-Layer Lifting Desk</div>
+                    <div class="exp-zh">双层升降桌</div>
+                    <div class="exp-meta">
+                        <div class="exp-stat"><div class="exp-stat-num">441w+</div><div class="exp-stat-label">Total Views</div></div>
+                        <div class="exp-stat"><div class="exp-stat-num">18w+</div><div class="exp-stat-label">Likes</div></div>
+                    </div>
+                    <a class="exp-link" href="https://v.douyin.com/-jM478cF1tI/" target="_blank" data-zh="观看实验记录" data-en="View Experiment">View Experiment</a>
+                </div>
+
+                <!-- Experiment 003 -->
+                <div class="experiment">
+                    <div class="exp-num">Experiment 003</div>
+                    <div class="exp-title">Floating Burger Lamp</div>
+                    <div class="exp-zh">麦当劳悬浮汉堡灯</div>
+                    <div class="exp-meta">
+                        <div class="exp-stat"><div class="exp-stat-num">200w+</div><div class="exp-stat-label">Total Views</div></div>
+                        <div class="exp-stat"><div class="exp-stat-num">4.5w+</div><div class="exp-stat-label">Likes</div></div>
+                    </div>
+                    <a class="exp-link" href="https://v.douyin.com/yvilsKKIgHc/" target="_blank" data-zh="观看实验记录" data-en="View Experiment">View Experiment</a>
+                </div>
+
+                <!-- Experiment 004 -->
+                <div class="experiment">
+                    <div class="exp-num">Experiment 004</div>
+                    <div class="exp-title">Fridge Food Street</div>
+                    <div class="exp-zh">冰箱美食街（东芝冰箱广告）</div>
+                    <div class="exp-meta">
+                        <div class="exp-stat"><div class="exp-stat-num">630w+</div><div class="exp-stat-label">Total Views</div></div>
+                        <div class="exp-stat"><div class="exp-stat-num">35w+</div><div class="exp-stat-label">Likes</div></div>
+                    </div>
+                    <a class="exp-link" href="https://v.douyin.com/vAXLDlJ6A9M/" target="_blank" data-zh="观看实验记录" data-en="View Experiment">View Experiment</a>
+                </div>
+
+                <!-- Experiment 005 -->
+                <div class="experiment">
+                    <div class="exp-num">Experiment 005</div>
+                    <div class="exp-title">NIO Brand Campaign</div>
+                    <div class="exp-zh">NIO 三八妇女节特别企划</div>
+                    <div class="exp-meta">
+                        <div class="exp-stat"><div class="exp-stat-num">90w+</div><div class="exp-stat-label">Total Views</div></div>
+                        <div class="exp-stat"><div class="exp-stat-num">3+1</div><div class="exp-stat-label">Interviews + TVC</div></div>
+                    </div>
+                    <a class="exp-link" href="https://v.douyin.com/wbCoi12CjbY/" target="_blank" data-zh="观看实验记录" data-en="View Experiment">View Experiment</a>
+                </div>
+
+                <!-- Experiment 006 -->
+                <div class="experiment">
+                    <div class="exp-num">Experiment 006</div>
+                    <div class="exp-title">Momenta Brand Co-Marketing</div>
+                    <div class="exp-zh">Momenta 品牌联合传播</div>
+                    <div class="exp-meta">
+                        <div class="exp-stat"><div class="exp-stat-num">3150w+</div><div class="exp-stat-label">Total Exposure</div></div>
+                        <div class="exp-stat"><div class="exp-stat-num">12</div><div class="exp-stat-label">Campaigns</div></div>
+                    </div>
+                    <p style="font-size:13px;color:var(--ink-light);line-height:1.8;margin-top:12px;" data-zh="联合发布会、Co-marketing产品传播、产品亮点展示三大板块，覆盖广汽丰田、东风奕派、央视朝闻天下等重点项目。" data-en="Joint launches, co-marketing campaigns, and product highlights covering GAC-Toyota, Dongfeng eπ, CCTV features, and more.">联合发布会、Co-marketing产品传播、产品亮点展示三大板块，覆盖广汽丰田、东风奕派、央视等重点项目。</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCENE 5: CREATIVE WORKSHOP ==================== -->
+    <section id="creative-workshop" class="content-section">
+        <div class="container">
+            <div class="page-frame parchment">
+                <div class="section-label" data-zh="创意工坊" data-en="Creative Workshop">Creative Workshop</div>
+                <div class="section-heading" data-zh="工具墙" data-en="The Tool Wall">工具墙</div>
+
+                <div class="tool-wall">
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-cube"></i></div><div class="tool-name">Blender</div></div>
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-film"></i></div><div class="tool-name">After Effects</div></div>
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-clapperboard"></i></div><div class="tool-name">Premiere Pro</div></div>
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-camera"></i></div><div class="tool-name">Photography</div></div>
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-robot"></i></div><div class="tool-name">AIGC</div></div>
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-language"></i></div><div class="tool-name">Japanese</div></div>
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-chart-line"></i></div><div class="tool-name">Data Analysis</div></div>
+                    <div class="tool-item"><div class="tool-icon"><i class="fa-solid fa-pen-fancy"></i></div><div class="tool-name">Copywriting</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCENE 6: ACHIEVEMENT COLLECTION ==================== -->
+    <section id="achievement-collection" class="content-section">
+        <div class="container">
+            <div class="page-frame parchment">
+                <div class="section-label" data-zh="荣誉收藏" data-en="Achievement Collection">Achievement Collection</div>
+                <div class="section-heading" data-zh="成就与荣誉" data-en="The Collection">成就与荣誉</div>
+                <div class="achievement-list">
+                    <div class="achievement-item"><div class="achievement-medal"><i class="fa-solid fa-award"></i></div><div class="achievement-text" data-zh="复旦大学广告学硕士" data-en="M.A. in Advertising, Fudan University">复旦大学广告学硕士</div></div>
+                    <div class="achievement-item"><div class="achievement-medal"><i class="fa-solid fa-star"></i></div><div class="achievement-text" data-zh="中国人民大学日语本科，日本神户大学交换留学" data-en="B.A. in Japanese, Renmin University; Exchange at Kobe University, Japan">中国人民大学日语本科，日本神户大学交换留学</div></div>
+                    <div class="achievement-item"><div class="achievement-medal"><i class="fa-solid fa-fire"></i></div><div class="achievement-text" data-zh="全网曝光4000w+，400w+预算管理经验，单项目ROI 190+" data-en="40M+ total exposure, 4M+ budget management, single-project ROI 190+">全网曝光4000w+，400w+预算管理经验，单项目ROI 190+</div></div>
+                    <div class="achievement-item"><div class="achievement-medal"><i class="fa-solid fa-trophy"></i></div><div class="achievement-text" data-zh="达人账号粉丝20倍增长，3个月蔚来门店获客线索增长5倍达4500+" data-en="20x follower growth for creator accounts, 5x leads increase to 4,500+ in 3 months">达人账号粉丝20倍增长，3个月蔚来门店获客线索增长5倍达4500+</div></div>
+                    <div class="achievement-item"><div class="achievement-medal"><i class="fa-solid fa-palette"></i></div><div class="achievement-text" data-zh="多件3D打印原创设计已申请专利" data-en="Multiple original 3D-printed designs with patent applications">多件3D打印原创设计已申请专利</div></div>
+                    <div class="achievement-item"><div class="achievement-medal"><i class="fa-solid fa-globe"></i></div><div class="achievement-text" data-zh="日语专八，N1，IELTS 7.0，CATTI三级笔译" data-en="Japanese N1, IELTS 7.0, CATTI Level 3 Translation">日语专八，N1，IELTS 7.0，CATTI三级笔译</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCENE 7: FINAL LETTER ==================== -->
+    <section id="final-letter" class="content-section">
+        <div class="container">
+            <div class="page-frame parchment">
+                <div class="section-label" data-zh="终章" data-en="Final Letter">Final Letter</div>
+                <div class="section-heading" data-zh="来自 JAVIER 的信" data-en="A Letter From Javier">A Letter From Javier</div>
+
+                <div class="letter-content">
+                    <p data-zh="我相信，每一次品牌传播都是一次炼金术——将普通的想法，通过创意、策略与执行，转化为具有真正传播价值的作品。在Momenta和NIO的经历教会我，最好的品牌故事不是被制造出来的，而是被发现、被提炼、被赋予生命的。"
+                       data-en="I believe every brand communication is a form of alchemy — transforming ordinary ideas, through creativity, strategy, and execution, into works of genuine communicative value. My experience at Momenta and NIO taught me that the best brand stories aren't manufactured — they are discovered, refined, and brought to life.">
+                    我相信，每一次品牌传播都是一次炼金术——将普通的想法，通过创意、策略与执行，转化为具有真正传播价值的作品。在Momenta和NIO的经历教会我，最好的品牌故事不是被制造出来的，而是被发现、被提炼、被赋予生命的。
+                    </p>
+                    <p data-zh="从3D打印创意视频到千万级品牌发布会，从达人账号孵化到AIGC工作流搭建——我始终在探索创意与技术的交界点。如果你也在寻找一个能将品牌愿景转化为实际影响力的创作者，我期待与你交流。"
+                       data-en="From 3D-printed creative videos to multi-million-view brand launches, from creator account incubation to AIGC workflow development — I've always explored the intersection of creativity and technology. If you're looking for a creator who can transform brand vision into real impact, I look forward to connecting.">
+                    从3D打印创意视频到千万级品牌发布会，从达人账号孵化到AIGC工作流搭建——我始终在探索创意与技术的交界点。如果你也在寻找一个能将品牌愿景转化为实际影响力的创作者，我期待与你交流。
+                    </p>
+
+                    <div class="letter-signoff">
+                        <div class="letter-signature-img">Javier Xie</div>
+                        <div class="letter-contact">
+                            <div data-zh="📧 xiejavier@163.com" data-en="📧 xiejavier@163.com">📧 xiejavier@163.com</div>
+                            <div data-zh="📍 上海，中国" data-en="📍 Shanghai, China">📍 上海，中国</div>
                         </div>
-                        <h3 class="timeline-school">
-                            <span data-zh="中国人民大学" data-en="Renmin University of China">中国人民大学</span>
-                            <span class="timeline-tag-985">985</span>
-                        </h3>
-                        <p class="timeline-major" data-zh="日语 · 外国语学院" data-en="Japanese · School of Foreign Languages">日语 · 外国语学院</p>
-                        <p class="timeline-note" data-zh="日本神户大学交换留学 (2022.03-2022.10)" data-en="Exchange at Kobe University, Japan (2022.03-2022.10)">日本神户大学交换留学 (2022.03-2022.10)</p>
+                        <div class="letter-seal"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== EXPERIENCE ==================== -->
-    <section class="experience section" id="experience">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="section-title-num">03</span>
-                <span data-zh="工作经历" data-en="Experience">工作经历</span>
-                <span class="section-title-line"></span>
-            </h2>
-
-            <!-- Momenta -->
-            <div class="exp-card" data-aos="fade-up" data-aos-duration="800">
-                <div class="exp-card-header" onclick="this.parentElement.classList.toggle('expanded')">
-                    <div class="exp-card-left">
-                        <div class="exp-company-icon momenta-icon">M</div>
-                        <div class="exp-card-info">
-                            <h3 class="exp-company">Momenta</h3>
-                            <p class="exp-role" data-zh="品牌市场公关实习生" data-en="Brand Marketing & PR Intern">品牌市场公关实习生</p>
-                            <p class="exp-date">2025.04 - 2026.01 · <span data-zh="上海" data-en="Shanghai">上海</span></p>
-                        </div>
-                    </div>
-                    <div class="exp-card-right">
-                        <div class="exp-highlights-pills">
-                            <span class="exp-pill">10+ A级项目</span>
-                            <span class="exp-pill">2项 S级项目</span>
-                            <span class="exp-pill">预算 400w+</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-down exp-arrow"></i>
-                    </div>
-                </div>
-                <div class="exp-card-body">
-                    <div class="exp-section">
-                        <h4 data-zh="🏗️ 品牌营销" data-en="🏗️ Brand Marketing">🏗️ 品牌营销</h4>
-                        <ul>
-                            <li data-zh="<strong>项目管理：</strong>10+ 品牌营销项目主负责人，总曝光超 4000w+；品牌S级保密项目品牌传播专项主负责人。"
-                                data-en="<strong>Project Management:</strong> Led 10+ brand marketing projects with 40M+ total exposure; lead for S-tier confidential brand communication projects."><strong>项目管理：</strong>10+ 品牌营销项目主负责人，总曝光超 4000w+；品牌S级保密项目品牌传播专项主负责人。</li>
-                            <li data-zh="<strong>品牌策划：</strong>年度S+级上海车展发布会，全网曝光 600w+；广丰科技开放日、Uber战略发布等Co-mkt项目，曝光 1450w+；产品GTM传播策略，曝光 1700w+。"
-                                data-en="<strong>Brand Strategy:</strong> S+-tier Auto Shanghai launch (6M+ exposure); GAC-Toyota Tech Open Day, Uber strategic announcement Co-marketing (14.5M+ exposure); Product GTM strategy (17M+ exposure)."><strong>品牌策划：</strong>年度S+级上海车展发布会，全网曝光 600w+；广丰科技开放日、Uber战略发布等Co-mkt项目，曝光 1450w+；产品GTM传播策略，曝光 1700w+。</li>
-                            <li data-zh="<strong>UGC生态建设：</strong>0-1搭建UGC内容挖掘评价体系，两周筛选 2000+ 条内容，额外曝光 1500w+，平均ROI > 50，最高单条视频曝光超 196w。"
-                                data-en="<strong>UGC Ecosystem:</strong> Built UGC evaluation system from scratch; screened 2,000+ content in 2 weeks, 15M+ additional exposure, avg ROI > 50, top single video 1.96M+ exposure."><strong>UGC生态建设：</strong>0-1搭建UGC内容挖掘评价体系，两周筛选 2000+ 条内容，额外曝光 1500w+，平均ROI > 50，最高单条视频曝光超 196w。</li>
-                        </ul>
-                    </div>
-                    <div class="exp-section">
-                        <h4 data-zh="⚙️ 品牌运营" data-en="⚙️ Brand Operations">⚙️ 品牌运营</h4>
-                        <ul>
-                            <li data-zh="<strong>垂媒运营：</strong>负责8款车型内容种草，409篇图文及视频，总曝光 1456.5w，超KPI目标 143%，ROI 44.1。"
-                                data-en="<strong>Vertical Media:</strong> Managed content seeding for 8 car models, 409 posts achieving 14.56M+ exposure, 143% of KPI, ROI 44.1."><strong>垂媒运营：</strong>负责8款车型内容种草，409篇图文及视频，总曝光 1456.5w，超KPI目标 143%，ROI 44.1。</li>
-                            <li data-zh="<strong>舆情监控：</strong>优化舆情监测体系，建立快速响应话术库，累计处理敏感信息 3500+ 条。"
-                                data-en="<strong>Reputation Management:</strong> Optimized monitoring system, built rapid-response playbook, processed 3,500+ sensitive items."><strong>舆情监控：</strong>优化舆情监测体系，建立快速响应话术库，累计处理敏感信息 3500+ 条。</li>
-                            <li data-zh="<strong>AIGC矩阵：</strong>主导AIGC创新体系，整合AI新闻、AIGV与AI作曲，构建'AI快讯''品牌AIMV'等多元内容形式，0至1完成路径验证。"
-                                data-en="<strong>AIGC Matrix:</strong> Led AIGC innovation system integrating AI news, AIGV & AI music into 'AI Flash' & 'Brand AIMV' content formats; validated production pipeline from scratch."><strong>AIGC矩阵：</strong>主导AIGC创新体系，整合AI新闻、AIGV与AI作曲，构建"AI快讯""品牌AIMV"等多元内容形式，0至1完成路径验证。</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- NIO -->
-            <div class="exp-card" data-aos="fade-up" data-aos-duration="800">
-                <div class="exp-card-header" onclick="this.parentElement.classList.toggle('expanded')">
-                    <div class="exp-card-left">
-                        <div class="exp-company-icon nio-icon">N</div>
-                        <div class="exp-card-info">
-                            <h3 class="exp-company">NIO 蔚来</h3>
-                            <p class="exp-role" data-zh="用户增长运营" data-en="User Growth Operations">用户增长运营</p>
-                            <p class="exp-date">2025.01 - 2025.04 · <span data-zh="上海" data-en="Shanghai">上海</span></p>
-                        </div>
-                    </div>
-                    <div class="exp-card-right">
-                        <div class="exp-highlights-pills">
-                            <span class="exp-pill">视频 9000+ 期</span>
-                            <span class="exp-pill">线索 4500+</span>
-                            <span class="exp-pill">效率 +300%</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-down exp-arrow"></i>
-                    </div>
-                </div>
-                <div class="exp-card-body">
-                    <ul>
-                        <li data-zh="<strong>区域视频生态：</strong>构建《蔚来换电100问》传播项目，协同上海50+门店与换电站，月视频产出 70+ 篇。"
-                            data-en="<strong>Regional Video Ecosystem:</strong> Built 'NIO Battery Swap 100 Q&A' project, coordinated 50+ stores & swap stations for 70+ monthly videos."><strong>区域视频生态：</strong>构建《蔚来换电100问》传播项目，协同上海50+门店与换电站，月视频产出 70+ 篇。</li>
-                        <li data-zh="<strong>品牌传播：</strong>策划品牌节日TVC、品牌用户故事，《妇女节TVC》全平台 62w+ 播放；项目交付时效提升 300%。"
-                            data-en="<strong>Brand Content:</strong> Created holiday TVC & user stories; Women's Day TVC reached 620K+ views; improved delivery efficiency by 300%."><strong>品牌传播：</strong>策划品牌节日TVC、品牌用户故事，《妇女节TVC》全平台 62w+ 播放；项目交付时效提升 300%。</li>
-                        <li data-zh="<strong>用户增长：</strong>政策解读+场景化产品体验优化，3个月获有效线索 4500+，带动试驾转化 300+ 次。"
-                            data-en="<strong>User Growth:</strong> Policy explainers + scenario-based product content; 4,500+ qualified leads in 3 months, 300+ test drive conversions."><strong>用户增长：</strong>政策解读+场景化产品体验优化，3个月获有效线索 4500+，带动试驾转化 300+ 次。</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 雅杰工作室 -->
-            <div class="exp-card" data-aos="fade-up" data-aos-duration="800">
-                <div class="exp-card-header" onclick="this.parentElement.classList.toggle('expanded')">
-                    <div class="exp-card-left">
-                        <div class="exp-company-icon studio-icon">Y</div>
-                        <div class="exp-card-info">
-                            <h3 class="exp-company" data-zh="雅杰工作室" data-en="Yajie Studio">雅杰工作室</h3>
-                            <p class="exp-role" data-zh="0-1爆款账号孵化「雅杰不加班」" data-en="0-1 Viral Account Incubation 'Yajie'" >0-1爆款账号孵化「雅杰不加班」</p>
-                            <p class="exp-date">2024.06 - 2026.01</p>
-                        </div>
-                    </div>
-                    <div class="exp-card-right">
-                        <div class="exp-highlights-pills">
-                            <span class="exp-pill">粉丝 20x 增长</span>
-                            <span class="exp-pill">全网曝光 3526w</span>
-                            <span class="exp-pill">ROI > 50</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-down exp-arrow"></i>
-                    </div>
-                </div>
-                <div class="exp-card-body">
-                    <ul>
-                        <li data-zh="<strong>账号孵化：</strong>以「重审美+巧设计+轻难度」策略，9期视频粉丝从 2w → 40w（20倍增长）；建立SOP提升50%更新效率。"
-                            data-en="<strong>Account Incubation:</strong> 'Aesthetics + Design + Accessibility' strategy; grew followers from 20K to 400K (20x) in 9 videos; built SOP improving publishing efficiency by 50%."><strong>账号孵化：</strong>以「重审美+巧设计+轻难度」策略，9期视频粉丝从 2w → 40w（20倍增长）；建立SOP提升50%更新效率。</li>
-                        <li data-zh="<strong>商务合作：</strong>提出"锦上添花"商单模式，策划9期视频双平台曝光 3526w，单条最高 407w，互动点赞 60w+。"
-                            data-en="<strong>Commercial Partnerships:</strong> Created 'icing on the cake' branded content model; 9 videos achieving 35.26M+ exposure across 2 platforms, top single video 4.07M views, 600K+ likes."><strong>商务合作：</strong>提出"锦上添花"商单模式，策划9期视频双平台曝光 3526w，单条最高 407w，互动点赞 60w+。</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 海丞MCN -->
-            <div class="exp-card" data-aos="fade-up" data-aos-duration="800">
-                <div class="exp-card-header" onclick="this.parentElement.classList.toggle('expanded')">
-                    <div class="exp-card-left">
-                        <div class="exp-company-icon mcn-icon">H</div>
-                        <div class="exp-card-info">
-                            <h3 class="exp-company" data-zh="海丞MCN团队" data-en="HaiCheng MCN">海丞MCN团队</h3>
-                            <p class="exp-role" data-zh="传播策划 · 爆款账户孵化" data-en="Content Strategist · Viral Account Incubation">传播策划 · 爆款账户孵化</p>
-                            <p class="exp-date">2021.07 - 2021.11</p>
-                        </div>
-                    </div>
-                    <div class="exp-card-right">
-                        <div class="exp-highlights-pills">
-                            <span class="exp-pill">3个 20w+ 粉账号</span>
-                            <span class="exp-pill">单条 900w+ 播放</span>
-                            <span class="exp-pill">10+ 广告项目</span>
-                        </div>
-                        <i class="fa-solid fa-chevron-down exp-arrow"></i>
-                    </div>
-                </div>
-                <div class="exp-card-body">
-                    <ul>
-                        <li data-zh="<strong>达人孵化：</strong>4个月从0-1孵化3个知识类达人账号（如"清华siyu"），粉丝总量突破20w；独立策划发布60+篇原创视频，单条最高播放 900w。"
-                            data-en="<strong>Creator Incubation:</strong> Incubated 3 knowledge-creator accounts (e.g. 'Tsinghua Siyu') from scratch in 4 months, 200K+ total followers; 60+ original videos, top single video 9M views."><strong>达人孵化：</strong>4个月从0-1孵化3个知识类达人账号（如"清华siyu"），粉丝总量突破20w；独立策划发布60+篇原创视频，单条最高播放 900w。</li>
-                        <li data-zh="<strong>商业变现：</strong>独立负责广告项目全案，成功交付10+个广告项目，所策划广告视频总播放量超 700w，完成流量变现路径验证。"
-                            data-en="<strong>Commercial Monetization:</strong> Independently delivered 10+ full-cycle ad projects; total ad video views exceeded 7M, validated traffic monetization pipeline."><strong>商业变现：</strong>独立负责广告项目全案，成功交付10+个广告项目，所策划广告视频总播放量超 700w，完成流量变现路径验证。</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== PORTFOLIO ==================== -->
-    <section class="portfolio section" id="portfolio">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="section-title-num">04</span>
-                <span data-zh="作品集" data-en="Portfolio">作品集</span>
-                <span class="section-title-line"></span>
-            </h2>
-
-            <!-- ===== 达人视频 ===== -->
-            <div class="portfolio-category" data-aos="fade-up">
-                <h3 class="portfolio-cat-title">
-                    <span class="cat-icon">🎬</span>
-                    <span data-zh="达人视频" data-en="Creator Videos">达人视频</span>
-                    <span class="cat-en" data-zh="雅杰不加班" data-en="Yajie Studio">雅杰不加班</span>
-                </h3>
-                <div class="portfolio-cat-divider"></div>
-
-                <div class="video-grid">
-
-                    <!-- 飞屋充电器 - 本地视频 -->
-                    <div class="video-card" data-video="videos/飞屋.mp4" data-douyin="https://v.douyin.com/kUNWu0pgtoo/" data-title="飞屋充电器" data-zh-title="飞屋磁吸无线充" data-en-title="Up House Magnetic Charger" data-meta="全平台播放 390w+ | 点赞 13w+">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/飞屋.jpg" alt="飞屋磁吸无线充" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="飞屋磁吸无线充" data-en="Up House Magnetic Charger">飞屋磁吸无线充</h4>
-                            <div class="video-meta"><span class="video-source">抖音</span> 390w+ 播放</div>
-                        </div>
-                    </div>
-
-                    <!-- 双层升降桌 - 本地视频 -->
-                    <div class="video-card" data-video="videos/升降桌副本-副本(1).mp4" data-douyin="https://v.douyin.com/-jM478cF1tI/" data-title="双层升降桌" data-zh-title="双层升降桌" data-en-title="Two-Layer Lifting Desk" data-meta="全平台播放 441w+ | 点赞 18w+">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/升降桌.jpg" alt="双层升降桌" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="双层升降桌" data-en="Two-Layer Lifting Desk">双层升降桌</h4>
-                            <div class="video-meta"><span class="video-source">抖音</span> 441w+ 播放</div>
-                        </div>
-                    </div>
-
-                    <!-- 麦当劳汉堡悬浮灯 - 本地视频 -->
-                    <div class="video-card" data-video="videos/麦麦夜灯(9).mp4" data-douyin="https://v.douyin.com/yvilsKKIgHc/" data-title="麦当劳汉堡悬浮灯" data-zh-title="麦当劳悬浮汉堡灯" data-en-title="McDonald's Floating Burger Lamp" data-meta="全平台播放 200w+ | 点赞 4.5w+">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/麦当劳.jpg" alt="麦当劳悬浮汉堡灯" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="麦当劳悬浮汉堡灯" data-en="McDonald's Floating Burger Lamp">麦当劳悬浮汉堡灯</h4>
-                            <div class="video-meta"><span class="video-source">抖音</span> 200w+ 播放</div>
-                        </div>
-                    </div>
-
-                    <!-- 美食冰箱 - 抖音链接 -->
-                    <div class="video-card" data-douyin="https://v.douyin.com/vAXLDlJ6A9M/" data-title="冰箱美食街" data-zh-title="冰箱美食街" data-en-title="Fridge Food Street" data-meta="全平台播放 630w+ | 点赞 35w+">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/冰箱美食街.jpg" alt="冰箱美食街" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="冰箱美食街" data-en="Fridge Food Street">冰箱美食街</h4>
-                            <div class="video-meta"><span class="video-source">抖音 · 东芝冰箱广告</span> 630w+ 播放</div>
-                        </div>
-                    </div>
-
-                    <!-- 曼德拉草尖叫充电器 -->
-                    <div class="video-card" data-douyin="https://v.douyin.com/pchfJNWNHp4/" data-title="曼德拉草尖叫充电器" data-zh-title="曼德拉草尖叫充电器" data-en-title="Mandrake Screaming Charger" data-meta="哈利波特主题手工 | 3D打印">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/曼德拉草.jpg" alt="曼德拉草尖叫充电器" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="曼德拉草尖叫充电器" data-en="Mandrake Screaming Charger">曼德拉草尖叫充电器</h4>
-                            <div class="video-meta"><span class="video-source">抖音 · 哈利波特手工</span> ⚡ Gryffindor</div>
-                        </div>
-                    </div>
-
-                    <!-- 巨型圣诞礼盒 -->
-                    <div class="video-card" data-douyin="https://v.douyin.com/SUj_MMi18_I/" data-title="巨型圣诞礼盒" data-zh-title="巨型圣诞礼盒" data-en-title="Giant Christmas Gift Box" data-meta="圣诞礼物手工DIY">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/圣诞礼盒.jpg" alt="巨型圣诞礼盒" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="巨型圣诞礼盒" data-en="Giant Christmas Gift Box">巨型圣诞礼盒</h4>
-                            <div class="video-meta"><span class="video-source">抖音</span> 圣诞手工DIY</div>
-                        </div>
-                    </div>
-
-                    <!-- 回转寿司喂食器 -->
-                    <div class="video-card" data-douyin="https://v.douyin.com/j9sFSN6GVlM/" data-title="回转寿司喂食器" data-zh-title="回转寿司喂食器" data-en-title="Conveyor Belt Sushi Cat Feeder" data-meta="流浪猫 | 原创设计已申请专利">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/寿司猫.jpg" alt="回转寿司喂食器" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="回转寿司喂食器" data-en="Conveyor Belt Sushi Cat Feeder">回转寿司喂食器</h4>
-                            <div class="video-meta"><span class="video-source">抖音 · 诚实一口猫粮</span> 流浪猫公益</div>
-                        </div>
-                    </div>
-
-                    <!-- 披萨扫地机器人 -->
-                    <div class="video-card" data-douyin="https://v.douyin.com/dpjokBJcJyA/" data-title="披萨扫地机器人" data-zh-title="披萨扫地机器人" data-en-title="Pizza Robot Vacuum" data-meta="石头扫地机器人 | 创意改造">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/披萨扫地.jpg" alt="披萨扫地机器人" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="披萨扫地机器人" data-en="Pizza Robot Vacuum">披萨扫地机器人</h4>
-                            <div class="video-meta"><span class="video-source">抖音 · 石头P20UltraPlus</span> 创意改造</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- ===== 品牌视频 ===== -->
-            <div class="portfolio-category" data-aos="fade-up">
-                <h3 class="portfolio-cat-title">
-                    <span class="cat-icon">📺</span>
-                    <span data-zh="品牌视频" data-en="Brand Videos">品牌视频</span>
-                    <span class="cat-en" data-zh="NIO · Momenta" data-en="NIO · Momenta">NIO · Momenta</span>
-                </h3>
-                <div class="portfolio-cat-divider"></div>
-
-                <div class="video-grid">
-
-                    <!-- NIO 三八妇女节 -->
-                    <div class="video-card" data-douyin="https://v.douyin.com/wbCoi12CjbY/" data-title="NIO Women's Day" data-zh-title="NIO 三八妇女节特别企划" data-en-title="NIO International Women's Day Special" data-meta="3期深度访谈+1期TVC | 全平台播放 90w+">
-                        <div class="video-thumb">
-                            <img src="images/video-covers/NIO妇女节.jpg" alt="NIO 三八妇女节特别企划" class="video-cover-img" loading="lazy">
-                            <div class="video-play-btn"><div class="play-circle"><i class="fa-solid fa-play"></i></div></div>
-                        </div>
-                        <div class="video-info">
-                            <h4 data-zh="NIO 三八妇女节特别企划" data-en="NIO Intl. Women's Day Special">NIO 三八妇女节特别企划</h4>
-                            <div class="video-meta"><span class="video-source">抖音 · NIO 蔚来</span> 90w+ 播放</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ===== Co-marketing 项目 ===== -->
-            <div class="portfolio-category" data-aos="fade-up">
-                <h3 class="portfolio-cat-title">
-                    <span class="cat-icon">🤝</span>
-                    <span data-zh="Co-marketing 项目" data-en="Co-marketing Projects">Co-marketing 项目</span>
-                    <span class="cat-en" data-zh="Momenta 品牌联合传播" data-en="Momenta Brand Co-marketing">Momenta 品牌联合传播</span>
-                </h3>
-                <div class="portfolio-cat-divider"></div>
-
-                <div class="image-gallery">
-
-                    <!-- 联合发布会 -->
-                    <div class="gallery-group">
-                        <h4 class="gallery-group-title" data-zh="🚀 联合发布会" data-en="🚀 Joint Launch Events">🚀 联合发布会</h4>
-                        <div class="gallery-grid" id="gallery-conference">
-                        </div>
-                    </div>
-
-                    <!-- COMKT 产品 -->
-                    <div class="gallery-group">
-                        <h4 class="gallery-group-title" data-zh="📱 Co-marketing 产品传播" data-en="📱 Co-marketing Product Campaigns">📱 Co-marketing 产品传播</h4>
-                        <div class="gallery-grid" id="gallery-comkt">
-                        </div>
-                    </div>
-
-                    <!-- M产品亮点 -->
-                    <div class="gallery-group">
-                        <h4 class="gallery-group-title" data-zh="💡 产品亮点展示" data-en="💡 Product Highlights">💡 产品亮点展示</h4>
-                        <div class="gallery-grid" id="gallery-product">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ==================== SKILLS & AWARDS ==================== -->
-    <section class="skills section" id="skills">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="section-title-num">05</span>
-                <span data-zh="技能与荣誉" data-en="Skills & Awards">技能与荣誉</span>
-                <span class="section-title-line"></span>
-            </h2>
-
-            <div class="skills-grid">
-                <!-- Skills -->
-                <div class="skills-col" data-aos="fade-right" data-aos-duration="800">
-                    <h3 class="skills-subtitle" data-zh="🎯 专业技能" data-en="🎯 Professional Skills">🎯 专业技能</h3>
-                    <div class="skill-icons">
-                        <div class="skill-item">
-                            <i class="fa-solid fa-cube skill-icon-blender"></i>
-                            <span>Blender</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-film skill-icon-pr"></i>
-                            <span>Premiere Pro</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-wave-square skill-icon-au"></i>
-                            <span>Audition</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-layer-group skill-icon-ae"></i>
-                            <span>After Effects</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-scissors skill-icon-cut"></i>
-                            <span>剪映</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-camera skill-icon-photo"></i>
-                            <span data-zh="摄影摄像" data-en="Photography">摄影摄像</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-language skill-icon-lang"></i>
-                            <span data-zh="日语 (专四)" data-en="Japanese (TEM-4)">日语 (专四)</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-chart-pie skill-icon-data"></i>
-                            <span data-zh="数据分析" data-en="Data Analysis">数据分析</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Awards -->
-                <div class="skills-col" data-aos="fade-left" data-aos-duration="800">
-                    <h3 class="skills-subtitle" data-zh="🏆 荣誉奖项" data-en="🏆 Honors & Awards">🏆 荣誉奖项</h3>
-                    <ul class="awards-list">
-                        <li><span class="award-icon"><i class="fa-solid fa-star"></i></span> Momenta 优秀绩效 AA（TOP 10%）</li>
-                        <li><span class="award-icon"><i class="fa-solid fa-trophy"></i></span> <span data-zh="中国政府奖学金（3次）" data-en="Chinese Government Scholarship (3x)">中国政府奖学金（3次）</span></li>
-                        <li><span class="award-icon"><i class="fa-solid fa-medal"></i></span> <span data-zh="中国人民大学国际交流校长奖学金" data-en="RUC President's Scholarship for Intl. Exchange">中国人民大学国际交流校长奖学金</span></li>
-                        <li><span class="award-icon"><i class="fa-solid fa-medal"></i></span> <span data-zh="日本神户大学JASSO奖学金" data-en="Kobe University JASSO Scholarship">日本神户大学JASSO奖学金</span></li>
-                        <li><span class="award-icon"><i class="fa-solid fa-file-lines"></i></span> <span data-zh="第二十四届复旦大学博士生学术论坛优秀论文奖" data-en="24th Fudan Doctoral Forum Excellent Paper Award">第二十四届复旦大学博士生学术论坛优秀论文奖</span></li>
-                        <li><span class="award-icon"><i class="fa-solid fa-film"></i></span> <span data-zh="24年酷尔斯微电影大赛优秀奖" data-en="2024 Coors Micro-Film Competition Excellence Award">24年酷尔斯微电影大赛优秀奖</span></li>
-                        <li><span class="award-icon"><i class="fa-solid fa-trophy"></i></span> <span data-zh="荣耀创意精英挑战赛全国三十强" data-en="Honor Creative Elite Challenge Top 30 National">荣耀创意精英挑战赛全国三十强</span></li>
-                        <li><span class="award-icon"><i class="fa-solid fa-star"></i></span> <span data-zh="人大广播台优秀干部" data-en="RUC Broadcasting Station Outstanding Officer">人大广播台优秀干部</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== CONTACT ==================== -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">
-                <span class="section-title-num">06</span>
-                <span data-zh="联系我" data-en="Contact">联系我</span>
-                <span class="section-title-line"></span>
-            </h2>
-
-            <div class="contact-grid" data-aos="fade-up" data-aos-duration="800">
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <h4>Email</h4>
-                    <a href="mailto:xiejavier@163.com">xiejavier@163.com</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <h4 data-zh="电话" data-en="Phone">电话</h4>
-                    <a href="tel:18750155101">18750155101</a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon-wrapper">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <h4 data-zh="城市" data-en="Location">城市</h4>
-                    <span data-zh="中国 · 上海" data-en="Shanghai, China">中国 · 上海</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <a href="#hero" class="footer-logo">JAVIER<span class="logo-dot">.</span></a>
-                <p class="footer-text" data-zh="品牌传播 · AIGC创新 · 用户增长" data-en="Brand Strategy · AIGC Innovation · Growth Marketing">品牌传播 · AIGC创新 · 用户增长</p>
-                <p class="footer-copy">© 2026 Javier Xie. <span data-zh="保留所有权利。" data-en="All rights reserved.">保留所有权利。</span></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ==================== VIDEO MODAL ==================== -->
-    <div class="video-modal" id="videoModal">
-        <div class="modal-backdrop" onclick="closeVideoModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeVideoModal()">&times;</button>
-            <div class="modal-video-wrapper" id="modalVideoWrapper">
-                <video id="modalVideoPlayer" controls playsinline style="width:100%;height:100%;display:none;"></video>
-                <iframe id="modalVideoIframe" style="width:100%;height:100%;display:none;" allowfullscreen allow="autoplay"></iframe>
-            </div>
-            <div class="modal-video-info">
-                <h3 id="modalVideoTitle"></h3>
-                <p id="modalVideoMeta"></p>
-                <a class="modal-external-link" id="modalExternalLink" href="#" target="_blank">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span data-zh="在抖音打开" data-en="Watch on Douyin">在抖音打开</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==================== IMAGE LIGHTBOX ==================== -->
-    <div class="lightbox" id="imageLightbox" onclick="closeLightbox()">
-        <button class="lightbox-close">&times;</button>
-        <img id="lightboxImage" src="" alt="">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- ==================== SCRIPTS ==================== -->
     <script src="js/main.js"></script>
 </body>
 </html>
